@@ -1,6 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
-import { WagmiProvider, createConfig, http, injected } from "wagmi";
+import { WagmiProvider, createConfig, http } from "wagmi";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { ConnectKitProvider, getDefaultConfig } from "connectkit";
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";

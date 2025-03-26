@@ -32,6 +32,11 @@ export const ConnectWalletDialog = ({
   setIsOpen,
 }: ConnectWalletDialogProps) => {
   const { connect, connectors } = useConnect();
+  const filteredConnectors = connectors.find(
+    (connector) => connector.id === "io.metamask"
+  )
+    ? connectors.filter((connector) => connector.id !== "metaMask")
+    : connectors;
 
   return (
     <Dialog open={isOpen} onOpenChange={setIsOpen}>
@@ -49,7 +54,7 @@ export const ConnectWalletDialog = ({
           <p className="text-xs">To start using Vicuna Finance</p>
         </DialogHeader>
         <div className="grid gap-4 py-4">
-          {connectors.map((connector) => (
+          {filteredConnectors.map((connector) => (
             <Button
               className="hover:bg-accent hover:text-primary flex items-center justify-between"
               key={connector.id}

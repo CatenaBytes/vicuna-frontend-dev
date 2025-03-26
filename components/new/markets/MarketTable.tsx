@@ -296,7 +296,7 @@ const MarketLine = ({
       <TableCell>{supplyAPR}</TableCell>
       <TableCell>{token.pair ? null : borrowInfo}</TableCell>
       <TableCell>{token.pair ? null : borrowAPR}</TableCell>
-      {/* {withVault && (
+      {withVault && (
         <TableCell>
           {token.pair && (
             <LoopingButton
@@ -307,7 +307,7 @@ const MarketLine = ({
             />
           )}
         </TableCell>
-      )} */}
+      )}
     </TableRow>
   );
 };

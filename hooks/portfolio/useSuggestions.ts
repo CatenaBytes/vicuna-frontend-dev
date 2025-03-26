@@ -8,12 +8,12 @@ import { SuggestionsWrapper } from "@/types";
 const useSuggestions = (): SuggestionsWrapper[] => {
   const vaultSuggestionsWrappers = useVaultSuggestions();
   const marketSuggestionsWrappers = useMarketsSuggestions();
-  // const loopingSuggestionsWrappers = useLoopingSuggestions();
+  const loopingSuggestionsWrappers = useLoopingSuggestions();
 
   const wrappersArray = [
     vaultSuggestionsWrappers,
     marketSuggestionsWrappers,
-    // loopingSuggestionsWrappers,
+    loopingSuggestionsWrappers,
   ];
   const mergedWrappers: Record<string, SuggestionsWrapper> = {};
 

@@ -424,20 +424,6 @@ const useUnlooping = (marketID: string, borrowToken: Token) => {
   };
 
   const confirm = async () => {
-    // console.log({
-    //   address: unloopingContract,
-    //   args: [
-    //     {
-    //       vicunaVault: collateralTokenAddress,
-    //       withdrawAssetAToken: collateralATokenAddress,
-    //       withdrawAmount: computedCollateralAmountBn,
-    //       borrowAsset: borrowTokenAddress,
-    //       repayAmount: repayAmountBn,
-    //       swapParams: odosQuote,
-    //     },
-    //   ],
-    //   chainId: marketDefinition.chainId,
-    // });
     writeContract(
       {
         abi: AutoDeleveragerAbi,
