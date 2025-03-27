@@ -498,7 +498,6 @@ export const LoopingModal = () => {
     validSupply.address !== supplyTokenObj.address ||
     validBorrow.address !== borrowTokenObj.address
   ) {
-    console.log(supplyTokenObj, borrowTokenObj, validSupply, validBorrow);
     updateParams({
       vault: vaultToken.address,
       supplyToken: validSupply.address,
